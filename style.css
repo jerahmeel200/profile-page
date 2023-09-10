@@ -55,3 +55,13 @@ body {
   border: 1px solid black;
   color: black;
 }
+
+.gap-xl {
+  gap: 50px;
+}
+.gap-l {
+  gap: 20px;
+}
+.gap-m {
+  gap: 10px;
+}

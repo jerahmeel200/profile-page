@@ -1,15 +1,20 @@
-const days = [
+const weekday = [
   "Sunday",
   "Monday",
   "Tuesday",
-  "Wednessday",
+  "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
 ];
-const d = new Date();
-let day = days[d.getUTCDay()];
-document.getElementById("day").innerHTML = day;
+const todayDate = new Date();
+const currentDayOfWeek = weekday[todayDate.getDay()];
+document.getElementById("today").textContent = currentDayOfWeek;
 
-const b = Date.now();
-document.getElementById("time").innerHTML = b;
+function refreshTime() {
+  const currentUTCTimeMilliseconds = Date.now();
+  const utcTime = document.getElementById("utctime");
+  document.getElementById("utctime").textContent = currentUTCTimeMilliseconds;
+  console.log(utcTime);
+}
+setInterval(refreshTime, 100);
