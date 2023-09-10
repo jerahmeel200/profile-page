@@ -3,34 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Page Creation with Specific Elements.</title>
     <link rel="stylesheet" href="style.css" />
+    <title>FrontEnd Page Creation with Specific Elements</title>
   </head>
   <body>
-    <div class="name-pic">
-      <!--slack image-->
+    <div class="container">
+      <h1 data-testid="slackUserName">Jerahmeel Princewill</h1>
+
       <img
-        data-testid="slackDisplayImage"
         src="./assets/image.jpg"
-        alt="jerahmeel princewill"
+        alt="Jerahmeel Princewill"
+        data-testid="slackDisplayImage"
+        loading="lazy"
+        class="img"
       />
-      <!--slack pic-->
-      <h1 data-testid="slackUserName" class="name">Jerahmeel Princewill</h1>
-      <!--track-->
-      <h1 data-testid="myTrack">Frontend</h1>
-      <!--github repo-->
+
+      <p data-testid="currentDayOfTheWeek" id="currentDayOfTheWeek">
+        <span>Current day of the Week: </span>
+      </p>
+
+      <p data-testid="currentUTCTime" id="currentUTCTime">
+        <span>Current UTC Time: </span>
+      </p>
+
+      <p data-testid="myTrack">Track: Frontend</p>
+
       <a
         href="https://github.com/jerahmeel200/profile-page"
         target="_blank"
-        data-testid="githubURL"
-        >GitHub</a
+        data-testid="“githubURL”"
+        class="link"
+        >GitHub URL</a
       >
-      <div class="day-time">
-        <h1 data-testid="currentDayOfTheWeek" id="day"></h1>
-        <h1 data-testid="currentUTCTime" id="time"></h1>
-      </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
