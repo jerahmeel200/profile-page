@@ -1,20 +1,15 @@
-// geting current weekday of the week
-const weekList = [
+const days = [
   "Sunday",
   "Monday",
   "Tuesday",
-  "Wednesday",
+  "Wednessday",
   "Thursday",
   "Friday",
   "Saturday",
 ];
-const day = new Date();
-let getDay = weekList[day.getDay()];
-const currentWeekDay = document.querySelector("#currentDayOfTheWeek");
-currentWeekDay.innerHTML += getDay;
+const d = new Date();
+let day = days[d.getUTCDay()];
+document.getElementById("day").innerHTML = day;
 
-//getting current UTC Time
-
-const utc = new Date().getUTCMilliseconds();
-const currentUTCTime = document.querySelector("#currentUTCTime");
-currentUTCTime.innerHTML += utc;
+const b = Date.now();
+document.getElementById("time").innerHTML = b;
